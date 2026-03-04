@@ -11,7 +11,8 @@ void ejercicio7();
 void ejercicio8();
 
 int main(void) {
-    ejercicio8();
+    int c = -1;
+    printf("%d", +c);
     return 0;
 }
 
@@ -26,7 +27,6 @@ void ejercicio1() {
 void ejercicio2() {
     int multCinco = 0;
     int multTres = 0;
-    int multTresYCinco = 0;
     int num = 0;
 
     for (int i = 0; i < 10; i++) {
@@ -36,18 +36,16 @@ void ejercicio2() {
         int esMultiplo3 = (num % 3 == 0);
         int esMultiplo5 = (num % 5 == 0);
 
-        if (esMultiplo3 && esMultiplo5) {
-            multTresYCinco += 1;
-        } else if (esMultiplo3) {
+        if (esMultiplo3) {
             multTres += 1;
-        } else if (esMultiplo5){
+        }
+        if (esMultiplo5) {
             multCinco += 1;
         }
     }
 
     printf("\nMultiplos de 3 ingresados: %d\n", multTres);
     printf("Multiplos de 5 ingresados: %d\n", multCinco);
-    printf("Multiplos de 3 Y 5 ingresados: %d\n", multTresYCinco);
 }
 
 void ejercicio3() {
@@ -64,7 +62,6 @@ void ejercicio3() {
 
 void ejercicio4() {
     int num = 0;
-
     for (int i = 0; i < 10; i++) {
         printf("(%d/10)Ingrese un entero: ", i+1);
         scanf("%d", &num);
